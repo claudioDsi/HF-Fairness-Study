@@ -1,0 +1,962 @@
+model_name,card_data,tags,likes,downloads
+models/unitary/unbiased-toxic-roberta,license: apache-2.0,text-classification,,28331
+models/protectai/unbiased-toxic-roberta-onnx,"base_model: unitary/unbiased-toxic-roberta
+language:
+- en
+license: apache-2.0
+pipeline_tag: token-classification
+tags:
+- toxicity
+- bias
+- roberta
+inference: false",token-classification,,14951
+models/protectai/distilroberta-bias-onnx,"base_model: valurank/distilroberta-bias
+datasets:
+- valurank/wikirev-bias
+language: en
+pipeline_tag: text-classification
+tags:
+- bias
+- distilroberta
+inference: false",text-classification,,5957
+models/d4data/bias-detection-model,"language:
+- en
+tags:
+- Text Classification
+co2_eq_emissions: 0.319355
+widget:
+- text: Nevertheless Trump and other Republicans have tarred the protests as havens
+    for terrorists intent on destroying property.
+  example_title: Biased example 1
+- text: Billie Eilish issues apology for mouthing an anti-Asian derogatory term in
+    a resurfaced video.
+  example_title: Biased example 2
+- text: Christians should make clear that the perpetuation of objectionable vaccines
+    and the lack of alternatives is a kind of coercion.
+  example_title: Biased example 3
+- text: There have been a protest by a group of people
+  example_title: Non-Biased example 1
+- text: While emphasizing he’s not singling out either party Cohen warned about the
+    danger of normalizing white supremacist ideology.
+  example_title: Non-Biased example 2",text-classification,,4738
+models/valurank/distilroberta-bias,"language: en
+license: other
+datasets:
+- valurank/wikirev-bias",text-classification,,3763
+models/bucketresearch/politicalBiasBERT,"language:
+- en
+license: mit
+library_name: transformers",text-classification,,1487
+models/laiyer/unbiased-toxic-roberta-onnx,"language:
+- en
+license: apache-2.0
+tags:
+- toxicity
+- bias
+- roberta
+inference: false
+pipeline_tag: token-classification",token-classification,,890
+models/newsmediabias/UnBIAS-Named-Entity-Recognition,"language:
+- en
+license: mit",token-classification,,349
+models/ledigajobb/single_label_unbiased_relevant_profession,"license: mit
+tags:
+- generated_from_trainer
+model-index:
+- name: single_label_unbiased_relevant_profession
+  results: []",text-classification,,277
+models/premsa/political-bias-prediction-allsides-mDeBERTa,license: apache-2.0,text-classification,,275
+models/laiyer/distilroberta-bias-onnx,"language: en
+tags:
+- bias
+- distilroberta
+datasets:
+- valurank/wikirev-bias
+pipeline_tag: text-classification
+inference: false",text-classification,,181
+models/anikulkar/DEI_strong_bias,license: mit,text-classification,,176
+models/newsmediabias/UnBIAS-classification-bert,"language:
+- en
+license: openrail
+datasets:
+- newsmediabias/news-bias-full-data",text-classification,,163
+models/newsmediabias/UnBIAS-NER,"license: mit
+datasets:
+- newsmediabias/BIAS-CONLL",token-classification,,133
+models/amedvedev/bert-tiny-cognitive-bias,"language:
+- en
+license: bsd-3-clause
+tags:
+- psychology
+- cognitive distortions
+pipeline_tag: text-classification
+widget:
+- text: We have known each other since childhood.
+  example_title: No Distortion
+- text: I can't believe I forgot to do that I'm such an idiot.
+  example_title: Personalization
+- text: I feel like I'm disappointing others.
+  example_title: Emotional Reasoning
+- text: All doctors are arrogant and don't really care about their patients.
+  example_title: Overgeneralizing
+- text: They are too young to hear it.
+  example_title: Labeling
+- text: She must never make any mistakes in her work.
+  example_title: Should Statements
+- text: If I don't finish this project on time my boss will fire me.
+  example_title: Catastrophizing
+- text: If I keep working hard they will eventually give me a raise.
+  example_title: Reward Fallacy",text-classification,,102
+models/Tobias/bert-base-uncased_English_Hotel_sentiment,"language: eng
+license: apache-2.0
+tags:
+- bert
+widget:
+- text: The hotel is very nicely located
+  example_title: Example 1
+- text: The reception staff were extremely helpful and very welcoming
+  example_title: Example 2
+- text: There is no balcony in the rooms on the mountain side
+  example_title: Example 3
+- text: A bit pricey
+  example_title: Example 4",text-classification,,65
+models/premsa/political-bias-prediction-allsides-DeBERTa,license: apache-2.0,text-classification,,62
+models/joaopn/unbiased-toxic-roberta-onnx-fp16,"language:
+- en
+license: apache-2.0
+tags:
+- text-classification
+- onnx
+- fp16
+- roberta
+- toxicity
+- bias
+- multi-class-classification
+- multi-label-classification
+- optimum
+inference: false",text-classification,,56
+models/mediabiasgroup/magpie-babe-ft,"datasets:
+- mediabiasgroup/BABE
+license: cc-by-nc-sa-4.0
+widget:
+- text: Since then health care has turned out to be a very strong issue for Democrats
+    who campaigned on the issue aggressively during the 2018 midterms and enjoyed
+    a net gain of 40 seats in the U.S. House of Representatives.",text-classification,,55
+models/mediabiasgroup/babe-v3-roberta-fully-trained,"license: cc-by-nc-sa-4.0
+widget:
+- text: Since then health care has turned out to be a very strong issue for Democrats
+    who campaigned on the issue aggressively during the 2018 midterms and enjoyed
+    a net gain of 40 seats in the U.S. House of Representatives.",text-classification,,49
+models/Social-Media-Fairness/Classifier-Bias-SG,license: openrail,text-classification,,32
+models/cajcodes/DistilBERT-PoliticalBias,"datasets:
+- cajcodes/political-bias
+language: en
+license: mit
+metrics:
+- matthews_corrcoef
+- roc_auc
+widget:
+- text: Tax cuts for the wealthy are essential because they drive economic growth
+    and job creation.",text-classification,,28
+models/valurank/distilroberta-mbfc-bias,"license: other
+tags:
+- generated_from_trainer
+model-index:
+- name: distilroberta-mbfc-bias
+  results: []",text-classification,,28
+models/fgs218ok/WikiEditBias200k,"datasets:
+- fgs218ok/WikiEditBias
+language:
+- en
+license: apache-2.0",text-classification,,22
+models/newsmediabias/Bert_Sentiment_Classification,"library_name: transformers
+tags: []",text-classification,,20
+models/mediabiasgroup/roberta_mtl_media_bias,"license: cc-by-nc-sa-4.0
+widget:
+- text: Since then health care has turned out to be a very strong issue for Democrats
+    who campaigned on the issue aggressively during the 2018 midterms and enjoyed
+    a net gain of 40 seats in the U.S. House of Representatives.",text-classification,,20
+models/seanbenhur/MuLTiGENBiaS,"language:
+- hn
+- bn
+- mn
+license: wtfpl
+tags:
+- Text Classification
+datasets:
+- ComMA
+metrics:
+- F1-Score
+widget:
+- text: but who in the holy hell says to relate with itor inspired by it??i'm a
+    23 yr old studentand i say it's wrongwatch for entertainment purposeand those
+    who get inspired by such moviesits their mental problem.and all the praise that
+    shahid's getting is for dark charachter that he portrays.and those sittis she's
+    talking abtdon't we hear those when a villian arrives on [screen.my](http://screen.my/)
+    point is bash sexismwhether it's by a man or a group of woman.and as far as i
+    rememberthose girls were not shown as dark charactersas kabir singh is?
+- text: सही है बोलने के अधिकार पर गाली दो parotest के अधिकार पर पुलिश का सर फोड़ो
+    मादरचोदो अधिकारो का कब सही इस्तेमाल करोगें???????",text-classification,,18
+models/hersheys-baklava/IsraelPalestine-Bias-Detector,license: wtfpl,text-classification,,18
+models/premsa/political-bias-prediction-allsides-BERT,license: apache-2.0,text-classification,,16
+models/mediabiasgroup/lbm_without_fakenews_pretrained,license: gpl-3.0,text-classification,,14
+models/deutsche-welle/bias_classifier_roberta_base_peft,"language:
+- en
+library_name: peft
+tags:
+- roberta
+datasets:
+- mediabiasgroup/BABE
+metrics:
+- f1
+pipeline_tag: text-classification
+base_model: roberta-base",text-classification,,12
+models/harshal-11/Ernie-PoliticalBias-Finetune,"base_model: nghuyong/ernie-1.0
+metrics:
+- accuracy
+- f1
+- precision
+- recall
+tags:
+- generated_from_trainer
+model-index:
+- name: Ernie-PoliticalBias-Finetune
+  results: []",text-classification,,12
+models/newsmediabias/Roberta_Sentiment_Classification,"library_name: transformers
+tags: []",text-classification,,11
+models/Social-Media-Fairness/Tahniat-Classifier,"license: openrail
+library_name: transformers",text-classification,,11
+models/responsibility-framing/predict-perception-bert-focus-assassin,"license: mit
+tags:
+- generated_from_trainer
+model-index:
+- name: predict-perception-bert-focus-assassin
+  results: []",text-classification,,10
+models/responsibility-framing/predict-perception-bert-focus-object,"license: mit
+tags:
+- generated_from_trainer
+model-index:
+- name: predict-perception-bert-focus-object
+  results: []",text-classification,,10
+models/D1V1DE/bias-detection,"datasets:
+- mediabiasgroup/BABE
+language:
+- en
+license: apache-2.0
+pipeline_tag: text-classification",text-classification,,9
+models/responsibility-framing/predict-perception-bert-blame-assassin,"license: mit
+tags:
+- generated_from_trainer
+model-index:
+- name: predict-perception-bert-blame-assassin
+  results: []",text-classification,,9
+models/mediabiasgroup/babe-base-annomatic,"library_name: transformers
+tags: []",text-classification,,9
+models/mediabiasgroup/magpie-pt,license: gpl-3.0,text-classification,,9
+models/responsibility-framing/predict-perception-bert-blame-none,"license: mit
+tags:
+- generated_from_trainer
+model-index:
+- name: predict-perception-bert-blame-none
+  results: []",text-classification,,9
+models/responsibility-framing/predict-perception-bert-focus-concept,"license: mit
+tags:
+- generated_from_trainer
+model-index:
+- name: predict-perception-bert-focus-concept
+  results: []",text-classification,,8
+models/Tobias/bert-base-german-cased_German_Hotel_sentiment,"language: de
+license: apache-2.0
+tags:
+- bert
+widget:
+- text: Das Frühstück ist sehr gut es gibt auch Laktosefreie Produkte.
+  example_title: Example 1
+- text: Das Personal ist sehr kompetent und sehr freundlich.
+  example_title: Example 2
+- text: 'Die Zimmer sind wie beschrieben sehr klein vergleichbar mit einer Kreuzfahrtschiffkabine. '
+  example_title: Example 3
+- text: Scheinwerfer vor dem Zimmer ganze Nacht an und zu hell
+  example_title: Example 4",text-classification,,8
+models/Tobias/bert-base-uncased_German_MultiLable_classification,"language: de
+license: apache-2.0
+tags:
+- bert
+widget:
+- text: Das Frühstück ist sehr gut es gibt auch Laktosefreie Produkte.
+  example_title: Example 1
+- text: Das Personal ist sehr kompetent und sehr freundlich.
+  example_title: Example 2
+- text: 'Die Zimmer sind wie beschrieben sehr klein vergleichbar mit einer Kreuzfahrtschiffkabine. '
+  example_title: Example 3
+- text: Scheinwerfer vor dem Zimmer ganze Nacht an und zu hell
+  example_title: Example 4",text-classification,,8
+models/tomhosking/deberta-v3-base-debiased-nli,"license: apache-2.0
+widget:
+- text: '[CLS] Rover is a dog. [SEP] Rover is a cat. [SEP]'",text-classification,,8
+models/responsibility-framing/predict-perception-bert-cause-human,"license: mit
+tags:
+- generated_from_trainer
+model-index:
+- name: predict-perception-bert-cause-human
+  results: []",text-classification,,8
+models/responsibility-framing/predict-perception-bert-blame-object,"license: mit
+tags:
+- generated_from_trainer
+model-index:
+- name: predict-perception-bert-blame-object
+  results: []",text-classification,,8
+models/responsibility-framing/predict-perception-bert-cause-concept,"license: mit
+tags:
+- generated_from_trainer
+model-index:
+- name: predict-perception-bert-cause-concept
+  results: []",text-classification,,8
+models/responsibility-framing/predict-perception-bert-cause-object,"license: mit
+tags:
+- generated_from_trainer
+model-index:
+- name: predict-perception-bert-cause-object
+  results: []",text-classification,,8
+models/AHarbury/debiasNLPFinal,"tags:
+- generated_from_keras_callback
+model-index:
+- name: AHarbury/debiasNLPFinal
+  results: []",text-classification,,8
+models/mediabiasgroup/ablation-right,"library_name: transformers
+tags: []",text-classification,,7
+models/mediabiasgroup/ablation-balanced,"library_name: transformers
+tags: []",text-classification,,7
+models/mediabiasgroup/ablation-left,"library_name: transformers
+tags: []",text-classification,,7
+models/mediabiasgroup/roberta-anno-lexical-ft,"datasets:
+- mediabiasgroup/anno-lexical
+license: cc-by-nc-sa-4.0
+widget:
+- text: With the can of worms now open Democrats see opportunity on everything from
+    gun control to climate change especially if the Supreme Court upholds Trump’s
+    declaration.",text-classification,,7
+models/shainaraza/toxity_classify_debiaser,"language:
+- en
+datasets:
+- jigsaw_unintended_bias",text-classification,,7
+models/fgs218ok/WikiEditBias400k_UnBIAS-BERT,license: apache-2.0,text-classification,,7
+models/responsibility-framing/predict-perception-bert-blame-victim,"license: mit
+tags:
+- generated_from_trainer
+model-index:
+- name: predict-perception-bert-blame-victim
+  results: []",text-classification,,7
+models/responsibility-framing/predict-perception-xlmr-blame-victim,"license: mit
+tags:
+- generated_from_trainer
+model-index:
+- name: predict-perception-xlmr-blame-victim
+  results: []",text-classification,,7
+models/responsibility-framing/predict-perception-xlmr-blame-none,"license: mit
+tags:
+- generated_from_trainer
+model-index:
+- name: predict-perception-xlmr-blame-none
+  results: []",text-classification,,6
+models/responsibility-framing/predict-perception-bert-focus-victim,"license: mit
+tags:
+- generated_from_trainer
+model-index:
+- name: predict-perception-bert-focus-victim
+  results: []",text-classification,,6
+models/Neha13/bias_identificaiton45,"tags:
+- generated_from_keras_callback
+model-index:
+- name: bias_identificaiton45
+  results: []",text-classification,,6
+models/seasnake23/unbias-gender,license: mit,text-classification,,6
+models/mediabiasgroup/DA-RoBERTa-pretrained,license: cc-by-sa-4.0,text-classification,,6
+models/mediabiasgroup/magpie-annomatic,"library_name: transformers
+tags: []",text-classification,,6
+models/franfj/media-bias-ukraine-dataset-all-minus-ukraine,"license: apache-2.0
+tags:
+- generated_from_trainer
+metrics:
+- f1
+base_model: distilbert-base-uncased
+model-index:
+- name: media-bias-ukraine-dataset-all-minus-ukraine
+  results: []",text-classification,,6
+models/responsibility-framing/predict-perception-bert-blame-concept,"license: mit
+tags:
+- generated_from_trainer
+model-index:
+- name: predict-perception-bert-blame-concept
+  results: []",text-classification,,6
+models/responsibility-framing/predict-perception-bert-cause-none,"license: mit
+tags:
+- generated_from_trainer
+model-index:
+- name: predict-perception-bert-cause-none
+  results: []",text-classification,,6
+models/responsibility-framing/predict-perception-xlmr-cause-object,"license: mit
+tags:
+- generated_from_trainer
+model-index:
+- name: predict-perception-xlmr-cause-object
+  results: []",text-classification,,5
+models/Tobias/bert-base-uncased_English_Hotel_classification,"language: eng
+license: apache-2.0
+tags:
+- bert
+widget:
+- text: The hotel is very nicely located
+  example_title: Example 1
+- text: The reception staff were extremely helpful and very welcoming
+  example_title: Example 2
+- text: There is no balcony in the rooms on the mountain side
+  example_title: Example 3
+- text: A bit pricey
+  example_title: Example 4",text-classification,,5
+models/franfj/media-bias-ukraine-dataset-all,"license: apache-2.0
+tags:
+- generated_from_trainer
+metrics:
+- f1
+base_model: distilbert-base-uncased
+model-index:
+- name: media-bias-ukraine-dataset-all
+  results: []",text-classification,,5
+models/mediabiasgroup/DA-RoBERTa-BABE,"language: en
+license: afl-3.0
+widget:
+- text: Since then health care has turned out to be a very strong issue for Democrats
+    who campaigned on the issue aggressively during the 2018 midterms and enjoyed
+    a net gain of 40 seats in the U.S. House of Representatives.",text-classification,,5
+models/harshal-11/roberta-political-bias,"base_model: roberta-base
+license: mit
+tags:
+- generated_from_trainer
+model-index:
+- name: roberta-political-bias
+  results: []",text-classification,,5
+models/bbiasi/politica_model0,"library_name: transformers
+tags: []",text-classification,,5
+models/bbiasi/politica_sentimento_model,"library_name: transformers
+tags: []",text-classification,,5
+models/jamnik99/finetuning-BERT-racial_bias_model-3000-samples,"base_model: distilbert-base-uncased
+license: apache-2.0
+metrics:
+- accuracy
+- f1
+tags:
+- generated_from_trainer
+model-index:
+- name: finetuning-BERT-racial_bias_model-3000-samples
+  results: []",text-classification,,4
+models/jamnik99/BERT-racial_bias_model_80.0K_samples_fold_2,"base_model: distilbert-base-uncased
+license: apache-2.0
+metrics:
+- accuracy
+- f1
+- precision
+- recall
+tags:
+- generated_from_trainer
+model-index:
+- name: BERT-racial_bias_model_80.0K_samples_fold_2
+  results: []",text-classification,,4
+models/Akamemz/RoBERTA_bias_classification,"metrics:
+- accuracy
+- bertscore
+pipeline_tag: text-classification",text-classification,,4
+models/mediabiasgroup/roberta-anno-lexical-coreset-ft,"library_name: transformers
+tags: []",text-classification,,4
+models/responsibility-framing/predict-perception-xlmr-focus-concept,"license: mit
+tags:
+- generated_from_trainer
+model-index:
+- name: predict-perception-xlmr-focus-concept
+  results: []",text-classification,,4
+models/responsibility-framing/predict-perception-xlmr-blame-assassin,"license: mit
+tags:
+- generated_from_trainer
+model-index:
+- name: predict-perception-xlmr-blame-assassin
+  results: []",text-classification,,4
+models/responsibility-framing/predict-perception-xlmr-cause-human,"license: mit
+tags:
+- generated_from_trainer
+model-index:
+- name: predict-perception-xlmr-cause-human
+  results: []",text-classification,,4
+models/responsibility-framing/predict-perception-xlmr-cause-none,"license: mit
+tags:
+- generated_from_trainer
+model-index:
+- name: predict-perception-xlmr-cause-none
+  results: []",text-classification,,4
+models/responsibility-framing/predict-perception-xlmr-focus-assassin,"license: mit
+tags:
+- generated_from_trainer
+model-index:
+- name: predict-perception-xlmr-focus-assassin
+  results: []",text-classification,,4
+models/responsibility-framing/predict-perception-xlmr-blame-concept,"license: mit
+tags:
+- generated_from_trainer
+model-index:
+- name: predict-perception-xlmr-blame-concept
+  results: []",text-classification,,4
+models/Tobias/bert-base-uncased_English_MultiLable_classification,"language: eng
+license: apache-2.0
+tags:
+- bert
+widget:
+- text: The hotel is very nicely located
+  example_title: Example 1
+- text: The reception staff were extremely helpful and very welcoming
+  example_title: Example 2
+- text: There is no balcony in the rooms on the mountain side
+  example_title: Example 3
+- text: A bit pricey
+  example_title: Example 4",text-classification,,4
+models/newsmediabias/UnBIAS-classifier,license: openrail,text-classification,,4
+models/newsmediabias/fake-news-classifier-elections,"datasets:
+- newsmediabias/fake_news_elections_labelled_data
+- newsmediabias/FAKE-NEWS-BIASES-LABELLED",text-classification,,4
+models/newsmediabias/DistilBert_Sentiment_Classification,"library_name: transformers
+tags: []",text-classification,,4
+models/valurank/distilroberta-mbfc-bias-4class,"license: other
+tags:
+- generated_from_trainer
+model-index:
+- name: distilroberta-mbfc-bias-4class
+  results: []",text-classification,,3
+models/franfj/media-bias-ukraine-dataset-all-masked,"license: apache-2.0
+tags:
+- generated_from_trainer
+metrics:
+- f1
+model-index:
+- name: media-bias-ukraine-dataset-all-masked
+  results: []",text-classification,,3
+models/franfj/media-bias-ukraine-dataset-all-minus-ukraine-removed,"license: apache-2.0
+tags:
+- generated_from_trainer
+metrics:
+- f1
+model-index:
+- name: media-bias-ukraine-dataset-all-minus-ukraine-removed
+  results: []",text-classification,,3
+models/franfj/media-bias-ukraine-dataset-all-removed,"license: apache-2.0
+tags:
+- generated_from_trainer
+metrics:
+- f1
+model-index:
+- name: media-bias-ukraine-dataset-all-removed
+  results: []",text-classification,,3
+models/franfj/UNEDMediaBiasTeam_at_SemEval23_Task3_Subtask1_MULTI,"license: mit
+tags:
+- generated_from_trainer
+metrics:
+- f1
+base_model: xlm-roberta-base
+model-index:
+- name: SEMEVAL23_TASK3_SUBTASK1_MULTI
+  results: []",text-classification,,3
+models/franfj/UNEDMediaBiasTeam_at_SemEval23_Task3_Subtask3_PRE_BABE_dataset,"license: apache-2.0
+tags:
+- generated_from_trainer
+metrics:
+- f1
+model-index:
+- name: UNEDMediaBiasTeam_at_SemEval23_Task3_Subtask3_PRE_BABE_dataset
+  results: []",text-classification,,3
+models/BogdanTurbal/racial_bias_classification,"license: apache-2.0
+tags:
+- generated_from_trainer
+datasets:
+- mbib-base
+metrics:
+- accuracy
+base_model: distilbert-base-uncased
+model-index:
+- name: racial_bias_classification
+  results:
+  - task:
+      type: text-classification
+      name: Text Classification
+    dataset:
+      name: mbib-base
+      type: mbib-base
+      config: racial-bias
+      split: train
+      args: racial-bias
+    metrics:
+    - type: accuracy
+      value: 0.7783452502553626
+      name: Accuracy
+      verified: false",text-classification,,3
+models/asun17904/multiberts-seed_1_winobias_classifieronly,"license: apache-2.0
+tags:
+- generated_from_trainer
+metrics:
+- accuracy
+model-index:
+- name: multiberts-seed_1_winobias_classifieronly
+  results: []",text-classification,,3
+models/asun17904/bert-base-uncased_winobias_classifieronly,"license: apache-2.0
+tags:
+- generated_from_trainer
+metrics:
+- accuracy
+model-index:
+- name: bert-base-uncased_winobias_classifieronly
+  results: []",text-classification,,3
+models/Tobias/bert-base-german-cased_German_Hotel_classification,"language: de
+license: apache-2.0
+tags:
+- bert
+widget:
+- text: Das Frühstück ist sehr gut es gibt auch Laktosefreie Produkte.
+  example_title: Example 1
+- text: Das Personal ist sehr kompetent und sehr freundlich.
+  example_title: Example 2
+- text: 'Die Zimmer sind wie beschrieben sehr klein vergleichbar mit einer Kreuzfahrtschiffkabine. '
+  example_title: Example 3
+- text: Scheinwerfer vor dem Zimmer ganze Nacht an und zu hell
+  example_title: Example 4",text-classification,,3
+models/SOUMYADEEPSAR/convbert_polbias,"library_name: transformers
+tags: []",text-classification,,3
+models/responsibility-framing/predict-perception-xlmr-cause-concept,"license: mit
+tags:
+- generated_from_trainer
+model-index:
+- name: predict-perception-xlmr-cause-concept
+  results: []",text-classification,,3
+models/responsibility-framing/predict-perception-xlmr-focus-object,"license: mit
+tags:
+- generated_from_trainer
+model-index:
+- name: predict-perception-xlmr-focus-object
+  results: []",text-classification,,3
+models/responsibility-framing/predict-perception-xlmr-blame-object,"license: mit
+tags:
+- generated_from_trainer
+model-index:
+- name: predict-perception-xlmr-blame-object
+  results: []",text-classification,,3
+models/responsibility-framing/predict-perception-xlmr-focus-victim,"license: mit
+tags:
+- generated_from_trainer
+model-index:
+- name: predict-perception-xlmr-focus-victim
+  results: []",text-classification,,3
+models/horychtom/czech_media_bias_classifier,"language: cs
+tags:
+- Czech
+inference: false",text-classification,,3
+models/mediabiasgroup/xlm_roberta_persuasive,"license: gpl-3.0
+widget:
+- text: Seitdem hat sich die Gesundheitsversorgung als ein sehr starkes Thema für
+    die Demokraten erwiesen die während der Zwischenwahlen 2019 einen aggressiven
+    Wahlkampf mit diesem Thema führten und 40 Sitze im US-Repräsentantenhaus hinzugewannen.",text-classification,,3
+models/PriyaPatel/bias_identificaiton2,"base_model: cardiffnlp/twitter-roberta-base-sentiment-latest
+tags:
+- generated_from_keras_callback
+model-index:
+- name: bias_identificaiton2
+  results: []",text-classification,,3
+models/PriyaPatel/bias_identificaiton45,"tags:
+- generated_from_keras_callback
+model-index:
+- name: bias_identificaiton45
+  results: []",text-classification,,3
+models/JACOBBBB/CustomModel_Tobias_HotelSST,"library_name: transformers
+tags: []",text-classification,,3
+models/jamnik99/BERT-racial_bias_model_80.0K_samples_fold_0,"base_model: distilbert-base-uncased
+license: apache-2.0
+metrics:
+- accuracy
+- f1
+- precision
+- recall
+tags:
+- generated_from_trainer
+model-index:
+- name: BERT-racial_bias_model_80.0K_samples_fold_0
+  results: []",text-classification,,2
+models/jamnik99/BERT-racial_bias_model_80.0K_samples_fold_1,"base_model: distilbert-base-uncased
+license: apache-2.0
+metrics:
+- accuracy
+- f1
+- precision
+- recall
+tags:
+- generated_from_trainer
+model-index:
+- name: BERT-racial_bias_model_80.0K_samples_fold_1
+  results: []",text-classification,,2
+models/SOUMYADEEPSAR/bert_mbibpolbias,"library_name: transformers
+tags: []",text-classification,,2
+models/henryscheible/winobias_trainer_roberta-large_finetuned,"license: mit
+tags:
+- generated_from_trainer
+metrics:
+- accuracy
+model-index:
+- name: winobias_trainer_roberta-large_finetuned
+  results: []",text-classification,,2
+models/henryscheible/winobias_trainer_v2_roberta-base_classifieronly,"license: mit
+tags:
+- generated_from_trainer
+metrics:
+- accuracy
+model-index:
+- name: winobias_trainer_v2_roberta-base_classifieronly
+  results: []",text-classification,,2
+models/henryscheible/gpt2_winobias_classifieronly,"license: mit
+tags:
+- generated_from_trainer
+model-index:
+- name: gpt2_winobias_classifieronly
+  results: []",text-classification,,2
+models/henryscheible/gpt2_winobias_finetuned,"license: mit
+tags:
+- generated_from_trainer
+metrics:
+- accuracy
+model-index:
+- name: gpt2_winobias_finetuned
+  results: []",text-classification,,2
+models/henryscheible/xlnet-base-cased_winobias_classifieronly,"license: mit
+tags:
+- generated_from_trainer
+model-index:
+- name: xlnet-base-cased_winobias_classifieronly
+  results: []",text-classification,,2
+models/henryscheible/xlnet-base-cased_winobias_finetuned,"license: mit
+tags:
+- generated_from_trainer
+metrics:
+- accuracy
+model-index:
+- name: xlnet-base-cased_winobias_finetuned
+  results: []",text-classification,,2
+models/tomhosking/bert-base-uncased-debiased-nli,"license: apache-2.0
+widget:
+- text: '[CLS] Rover is a dog. [SEP] Rover is a cat. [SEP]'",text-classification,,2
+models/newsmediabias/LLAMA-BIAS-Classifier,license: apache-2.0,text-classification,,2
+models/newsmediabias/Roberta_Toxicity_Classification,"library_name: transformers
+tags: []",text-classification,,2
+models/newsmediabias/Bert_Toxicity_Classification,"library_name: transformers
+tags: []",text-classification,,2
+models/asun17904/multiberts-seed_0_winobias_classifieronly,"license: apache-2.0
+tags:
+- generated_from_trainer
+metrics:
+- accuracy
+model-index:
+- name: multiberts-seed_0_winobias_classifieronly
+  results: []",text-classification,,2
+models/rinapch/distilbert-media-bias,license: cc-by-sa-4.0,text-classification,,2
+models/Alicewuu/bias_detection,"library_name: transformers
+tags: []",text-classification,,2
+models/premsa/political-bias-prediction-allsides-mBERT,license: apache-2.0,text-classification,,2
+models/adisrini11/AIE-Assessment,"license: apache-2.0
+tags:
+- generated_from_trainer
+datasets:
+- tweet_eval
+metrics:
+- accuracy
+model-index:
+- name: AIE-Assessment
+  results:
+  - task:
+      type: text-classification
+      name: Text Classification
+    dataset:
+      name: tweet_eval
+      type: tweet_eval
+      config: emotion
+      split: test
+      args: emotion
+    metrics:
+    - type: accuracy
+      value: 0.800844475721323
+      name: Accuracy
+      verified: false",text-classification,,2
+models/Rgtygfhjjgtgrf/Bias_Detector,license: unknown,text-classification,,1
+models/Ahmedhisham/social_bias_Bert,"tags:
+- generated_from_keras_callback
+model-index:
+- name: social_bias_Bert
+  results: []",text-classification,,1
+models/newsmediabias/DistilBert_Toxicity_Classification,"library_name: transformers
+tags: []",text-classification,,1
+models/newsmediabias/UnBIAS-classification-bert-old,license: mit,text-classification,,1
+models/najeebY/bias_model_no_title,"base_model: distilbert/distilbert-base-uncased
+license: apache-2.0
+metrics:
+- accuracy
+tags:
+- generated_from_trainer
+model-index:
+- name: bias_model_no_title
+  results: []",text-classification,,1
+models/najeebY/bias_model_title,"base_model: distilbert/distilbert-base-uncased
+license: apache-2.0
+metrics:
+- accuracy
+tags:
+- generated_from_trainer
+model-index:
+- name: bias_model_title
+  results: []",text-classification,,1
+models/najeebY/bias_model_1,"base_model: distilbert/distilbert-base-uncased
+license: apache-2.0
+metrics:
+- accuracy
+tags:
+- generated_from_trainer
+model-index:
+- name: bias_model_1
+  results: []",text-classification,,1
+models/mediabiasgroup/xlm_roberta_loaded_language,"license: gpl-3.0
+widget:
+- text: Seitdem hat sich die Gesundheitsversorgung als ein sehr starkes Thema für
+    die Demokraten erwiesen die während der Zwischenwahlen 2019 einen aggressiven
+    Wahlkampf mit diesem Thema führten und 40 Sitze im US-Repräsentantenhaus hinzugewannen.",text-classification,,1
+models/mediabiasgroup/xlm_roberta_mtl_media_bias,"license: cc-by-4.0
+widget:
+- text: Seitdem hat sich die Gesundheitsversorgung als ein sehr starkes Thema für
+    die Demokraten erwiesen die während der Zwischenwahlen 2019 einen aggressiven
+    Wahlkampf mit diesem Thema führten und 40 Sitze im US-Repräsentantenhaus hinzugewannen.",text-classification,,1
+models/mediabiasgroup/xlm_roberta_subj_language,"license: gpl-3.0
+widget:
+- text: Seitdem hat sich die Gesundheitsversorgung als ein sehr starkes Thema für
+    die Demokraten erwiesen die während der Zwischenwahlen 2019 einen aggressiven
+    Wahlkampf mit diesem Thema führten und 40 Sitze im US-Repräsentantenhaus hinzugewannen.",text-classification,,1
+models/librarian-bots/BERTopic_model_card_bias,"language:
+- en
+license: mit
+library_name: bertopic
+tags:
+- bertopic
+- metadata
+- model cards
+- bias
+datasets:
+- davanstrien/model_cards_with_readmes
+pipeline_tag: text-classification
+inference: false",text-classification,,1
+models/SOUMYADEEPSAR/bert_mbibpolbias1,"library_name: transformers
+tags: []",text-classification,,1
+models/SOUMYADEEPSAR/BERT_POLBIAS,"library_name: transformers
+tags: []",text-classification,,1
+models/SOUMYADEEPSAR/Polbias_subj1,"library_name: transformers
+tags: []",text-classification,,1
+models/SOUMYADEEPSAR/roberta_mbibpolbias,"library_name: transformers
+tags: []",text-classification,,1
+models/SOUMYADEEPSAR/roberta_polbias,"library_name: transformers
+tags: []",text-classification,,1
+models/XiweiZ/sts-ft-biased,"license: apache-2.0
+tags:
+- setfit
+- sentence-transformers
+- text-classification
+pipeline_tag: text-classification",text-classification,,1
+models/franfj/media-bias-ukraine-dataset-all-minus-ukraine-masked,"license: apache-2.0
+tags:
+- generated_from_trainer
+metrics:
+- f1
+base_model: distilbert-base-uncased
+model-index:
+- name: media-bias-ukraine-dataset-all-minus-ukraine-masked
+  results: []",text-classification,,1
+models/franfj/UNEDMediaBiasTeam_at_SemEval23_Task3_Subtask1_PRE_BABE_dataset,"license: apache-2.0
+tags:
+- generated_from_trainer
+metrics:
+- f1
+base_model: distilbert-base-uncased-finetuned-sst-2-english
+model-index:
+- name: semeval23-t3-st1-en-babe-distilbert-base-uncased-finetuned-sst-2-english
+  results: []",text-classification,,1
+models/csalaam/bias-classification-setfit-model,"license: apache-2.0
+tags:
+- setfit
+- sentence-transformers
+- text-classification
+pipeline_tag: text-classification",text-classification,,1
+models/csalaam/bias-classification-setfit-model-islamic_bias,"license: apache-2.0
+tags:
+- setfit
+- sentence-transformers
+- text-classification
+pipeline_tag: text-classification",text-classification,,1
+models/csalaam/bias-classification-setfit-model-womenbias,"license: apache-2.0
+tags:
+- setfit
+- sentence-transformers
+- text-classification
+pipeline_tag: text-classification",text-classification,,1
+models/csalaam/bias-classification-setfit-model-blackbias,"license: apache-2.0
+tags:
+- setfit
+- sentence-transformers
+- text-classification
+pipeline_tag: text-classification",text-classification,,0
+models/fossoescp/morality-analysis,"language:
+- en
+license: unknown
+tags:
+- moral
+datasets:
+- USC-MOLA-Lab/MFRC
+pipeline_tag: text-classification",text-classification,,0
+models/hbui/Drought_Vulnerability_Assessment,"language:
+- en
+license: afl-3.0
+library_name: sklearn
+tags:
+- climate
+- drought
+- public water system
+- vulnerability
+metrics:
+- f1
+- recall
+pipeline_tag: tabular-classification",tabular-classification,,0
+models/tahniat/Classifier_bias_TahniatKhan,"language:
+- en
+license: openrail
+library_name: transformers
+tags:
+- code
+pipeline_tag: text-classification",text-classification,,0
+models/shainaraza/clinical-bias-ner,"language:
+- en
+license: openrail
+metrics:
+- f1
+- accuracy",token-classification,,0
+models/mediabiasgroup/lbm_pretrained,license: gpl-3.0,text-classification,,0
+models/mediabiasgroup/lbm_without_media_bias_pretrained,license: gpl-3.0,text-classification,,0
+models/mediabiasgroup/xlm_roberta_veracity,"license: gpl-3.0
+widget:
+- text: Seitdem hat sich die Gesundheitsversorgung als ein sehr starkes Thema für
+    die Demokraten erwiesen die während der Zwischenwahlen 2019 einen aggressiven
+    Wahlkampf mit diesem Thema führten und 40 Sitze im US-Repräsentantenhaus hinzugewannen.",text-classification,,0
+models/sachsharma/QualityAssessment,"datasets:
+- OpenGVLab/ShareGPT-4o
+language:
+- en
+- hi
+license: afl-3.0
+metrics:
+- accuracy
+pipeline_tag: text-classification
+tags:
+- text-generation-inference",text-classification,,0
