@@ -91,7 +91,7 @@ def code_analysis():
 
     models_name = df['model_name'].str.replace('models/', '', regex=False).tolist()
     models_name = d.preprocessing_queries(models_name)
-    token = "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"
+    token = ""
     d.mine_github_source_code(models_name, token, "all_models_source_code_part_1_2.json")
 
 
