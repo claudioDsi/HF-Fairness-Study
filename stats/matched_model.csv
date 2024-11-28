@@ -1,0 +1,20 @@
+Model,Repository,Matched Keywords First Set,Matched Keywords Second Set,Matched Keywords Total,Matched Libraries,Stars,Forks,Model Mentions in Code
+siebert/sentiment-roberta-large-english,arthurxarmani/SimpleAISentimentAnalysis,1,1,1,0,1,0,1
+bunsenfeng/FactKB,BunsenFeng/FactKB,1,1,1,0,18,0,0
+adibvafa/CodonTransformer,Adibvafa/CodonTransformer,1,1,1,0,103,4,1
+cor-c/test,limonyellow/corona-testing,1,1,1,0,0,0,0
+cor-c/test,andyvzcode/backend-test-cornershop,1,1,1,0,0,1,0
+cor-c/test,sinchuk140995/back-test-brite-core,1,1,1,0,0,0,0
+black/simple_kitchen,danderfer/Comp_Sci_Sem_2,1,1,1,0,97,18,0
+influencer/model,zhangylch/FIREANN,1,1,1,0,23,4,0
+influencer/model,JulioRena/DataScience-hiring_prediction_classification,1,1,1,0,0,0,0
+influencer/model,rakomar/federated_learning_comparison,1,1,1,0,1,0,0
+influencer/model,sachink382/Twitter-Sentiment-Analysis---Analytics-Vidhya,1,1,1,0,13,7,0
+influencer/model,workspace-for-cross-modality/PAT-Net,1,1,1,0,4,0,0
+thothai/thoth,worst-boy/ThothAi,1,1,1,0,1,0,0
+time-machine/test,amazon-archives/amazon-macie-activity-generator,1,1,1,0,20,12,0
+time-machine/test,aws-solutions/improving-forecast-accuracy-with-machine-learning,1,1,1,0,42,24,0
+time-machine/test,MaorOzana/Medical-Segmentation-Decathlon-U-net-CNN-with-Generalized-Dice-Coefficient,1,1,1,0,21,1,0
+time-machine/test,danderfer/Comp_Sci_Sem_2,1,1,1,0,98,18,0
+vegetable/test,Grzegorr/Paper-Tactile-Feedback-Cooking,1,1,1,0,0,0,0
+vegetable/test,danderfer/Comp_Sci_Sem_2,1,1,1,0,98,18,0

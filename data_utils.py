@@ -1,5 +1,5 @@
 from operator import index
-
+from collections import Counter
 import pandas as pd
 import re
 import config as cf
@@ -16,6 +16,151 @@ import re
 
 
 
+
+
+
+
+def save_python_file_names_to_csv(json_file_path, output_csv_path):
+    """
+    Save the names of Python files identified in the JSON file to a CSV file.
+
+    Parameters:
+        json_file_path (str): The path to the JSON file.
+        output_csv_path (str): The path to the output CSV file.
+
+    Returns:
+        None
+    """
+    try:
+        # Load the JSON file
+        with open(json_file_path, 'r') as file:
+            data = json.load(file)
+
+        python_files = []
+
+        # Loop through the JSON structure
+        for key, entries in data.items():  # Iterates over the top-level keys
+            for entry in entries:  # Iterates over each list of entries
+                if entry.get("model_mentions_in_code"):  # Check if model_mentions_in_code is True
+                    for file_info in entry.get("files", []):  # Check the files array
+                        if file_info["file_name"].endswith('.py'):  # Check for Python file
+                            python_files.append(file_info["file_name"])
+
+        # Write the Python file names to a CSV file
+        with open(output_csv_path, 'w', newline='') as csvfile:
+            csvwriter = csv.writer(csvfile)
+            # Write header
+            csvwriter.writerow(["Python File Name"])
+            # Write file names
+            for file_name in python_files:
+                csvwriter.writerow([file_name])
+
+        print(f"Python file names have been saved to {output_csv_path}")
+
+    except FileNotFoundError:
+        print(f"Error: The file {json_file_path} was not found.")
+    except json.JSONDecodeError:
+        print(f"Error: The file {json_file_path} is not a valid JSON.")
+    except Exception as e:
+        print(f"An unexpected error occurred: {e}")
+
+
+def find_most_common_python_file_names(json_file_path, top_n=10):
+    """
+    Find the most common Python file names in the JSON file.
+
+    Parameters:
+        json_file_path (str): The path to the JSON file.
+        top_n (int): The number of most common file names to return.
+
+    Returns:
+        list: A list of tuples with the most common file names and their counts.
+    """
+    try:
+        # Load the JSON file
+        with open(json_file_path, 'r') as file:
+            data = json.load(file)
+
+        python_files = []
+
+        # Loop through the JSON structure
+        for key, entries in data.items():  # Iterates over the top-level keys
+            for entry in entries:  # Iterates over each list of entries
+                if entry.get("model_mentions_in_code"):  # Check if model_mentions_in_code is True
+                    for file_info in entry.get("files", []):  # Check the files array
+                        if file_info["file_name"].endswith('.py'):  # Check for Python file
+                            python_files.append(file_info["file_name"])
+
+        # Count occurrences of each file name
+        file_name_counts = Counter(python_files)
+
+        # Return the most common file names
+        return file_name_counts.most_common(top_n)
+
+    except FileNotFoundError:
+        print(f"Error: The file {json_file_path} was not found.")
+        return []
+    except json.JSONDecodeError:
+        print(f"Error: The file {json_file_path} is not a valid JSON.")
+        return []
+    except Exception as e:
+        print(f"An unexpected error occurred: {e}")
+        return []
+
+
+
+
+def count_python_files_by_repository_to_csv(json_file_path, output_csv_path):
+    """
+    Count the total number of Python files where 'model_mentions_in_code' is true,
+    grouped by each repository, and save the result to a CSV file.
+
+    Parameters:
+        json_file_path (str): The path to the JSON file.
+        output_csv_path (str): The path to the output CSV file.
+
+    Returns:
+        None
+    """
+    try:
+        # Load the JSON file
+        with open(json_file_path, 'r') as file:
+            data = json.load(file)
+
+        # Dictionary to store counts by repository
+        repository_file_counts = {}
+
+        # Loop through the JSON structure
+        for key, entries in data.items():  # Iterates over the top-level keys
+            for entry in entries:  # Iterates over each list of entries
+                if entry.get("model_mentions_in_code"):  # Check if model_mentions_in_code is True
+                    repo_name = entry.get("repository", "Unknown Repository")
+                    python_file_count = sum(
+                        1 for file_info in entry.get("files", [])
+                        if file_info["file_name"].endswith('.py')
+                    )
+                    # Update the count for the repository
+                    repository_file_counts[repo_name] = (
+                            repository_file_counts.get(repo_name, 0) + python_file_count
+                    )
+
+        # Write the results to a CSV file
+        with open(output_csv_path, 'w', newline='') as csvfile:
+            csvwriter = csv.writer(csvfile)
+            # Write header
+            csvwriter.writerow(["Repository", "Python File Count"])
+            # Write repository data
+            for repo, count in repository_file_counts.items():
+                csvwriter.writerow([repo, count])
+
+        print(f"Results have been saved to {output_csv_path}")
+
+    except FileNotFoundError:
+        print(f"Error: The file {json_file_path} was not found.")
+    except json.JSONDecodeError:
+        print(f"Error: The file {json_file_path} is not a valid JSON.")
+    except Exception as e:
+        print(f"An unexpected error occurred: {e}")
 
 
 def split_csv(input_file, output_dir, rows_per_file):
@@ -84,9 +229,6 @@ def search_for_libraries(content):
 
     if first_set:
         count_first += 1
-
-
-
 
 
     return count_first
@@ -241,7 +383,7 @@ def search_keywords_and_libraries(json_file, output_csv):
 
 
 
-def filter_models_with_matches(input_csv, output_csv):
+def filter_models_with_code(input_csv, output_csv):
     """
     Filters models that have at least one matched keyword or matched library from the input CSV
     and writes them to a new output CSV.
@@ -258,7 +400,7 @@ def filter_models_with_matches(input_csv, output_csv):
 
         # Check for matching conditions
         for row in reader:
-            if int(row["Matched Keywords"]) > 0 or int(row["Matched Libraries"]) > 0:
+            if int(row["Model Mentions in Code"]) > 0:
                 filtered_rows.append(row)
 
     # Write the filtered rows to the output CSV
@@ -530,7 +672,7 @@ def search_keywords_and_libraries_old(json_file, keywords, libraries):
 
 
 def preprocessing_queries(models: list) -> list:
-    with open('all_models_source_code.json', 'r',encoding="utf8", errors="ignore") as file:
+    with open('all_models_source_code_part_1.json', 'r', encoding="utf8", errors="ignore") as file:
         data = json.load(file)
 
     # Estraggo i modelli che ho già processato
@@ -708,12 +850,17 @@ def split_df_by_tags(df, output_dir):
 
 def group_and_count_by_tags(df, out_file):
     # Assuming tags are stored as a list in each row. If it's a string, additional splitting might be needed.
-    df_exploded = df.explode('tags')
-    grouped = df_exploded.groupby('tags')['model_name'].count().reset_index(name='count')
+    df_exploded = df.explode('tag')
+    grouped = df_exploded.groupby('tag')['model'].count().reset_index(name='count')
     grouped = grouped.sort_values(by='count', ascending=False)
     #print(grouped.shape)
     grouped.to_csv(out_file, index=False)
     return grouped
+
+def sort_by_col(df,col, out):
+    sorted_df = df.sort_values(by=col, ascending=False)
+    sorted_df.to_csv(out, index=False)
+    return sorted_df
 
 
 def sort_by_likes(df,out):
@@ -722,7 +869,8 @@ def sort_by_likes(df,out):
     return sorted_df
 
 def sort_by_downloads(df, out):
-    sorted_df = df.sort_values(by='downloads', ascending=False)
+    sorted_df = df.sort_values(by='Stars', ascending=False)
+    sorted_df= sorted_df[:10]
     sorted_df.to_csv(out, index=False)
     return sorted_df
 
@@ -732,7 +880,7 @@ def sort_by_support(df,out):
 
 
 def filter_unpopular(df, threshold, out):
-    filtered_df = df[df['downloads'] >= threshold]
+    filtered_df = df[df['Usage Count'] >= threshold]
     #filtered_df.to_csv(out_file, index=False)
     filtered_df.to_csv(out, index=False)
     return
